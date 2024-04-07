@@ -18,7 +18,9 @@ interface TaxCalculationOptions {
 	products: Product[];
 }
 
-function taxCalculation({ products, tax }: TaxCalculationOptions): number[] {
+function taxCalculation(options: TaxCalculationOptions): [number, number] {
+	const { tax, products } = options;
+
 	let total = 0;
 
 	products.forEach(({ price }) => {
@@ -32,9 +34,9 @@ const shoppingCart = [phone, tablet];
 
 const tax = 0.15;
 
-const [total, impuestos] = taxCalculation({ products: shoppingCart, tax: tax });
+const [total, taxTotal] = taxCalculation({ products: shoppingCart, tax: tax });
 
 console.log('Total', total);
-console.log('Total', impuestos);
+console.log('Tax', taxTotal);
 
 export {};
