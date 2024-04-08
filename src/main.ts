@@ -1,5 +1,5 @@
 import './style.css';
-import { setupCounter } from './counter.ts';
+
 // import './topics/01-basic-types';
 // import './topics/02-object-interface';
 // import './topics/03-functions';
@@ -9,12 +9,11 @@ import { setupCounter } from './counter.ts';
 // import './topics/07-import-export';
 // import './topics/08-classes';
 // import './topics/09-generics';
-import './topics/10-decorators.ts';
+// import './topics/10-decorators';
+import './topics/11-optional-chaining';
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
  Hola Mundo
 `;
 
-console.log('hola mundo');
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!);
+// console.log('hola mundo');
